@@ -10,7 +10,7 @@ pipeline {
     stage('Build image') {
       steps {
         script {
-          def app = docker.build("35311/kiii-jenkins")
+          def app = docker.build("35311/kiii-jenkins", "-f Dockerfile .")
         }
 
       }
